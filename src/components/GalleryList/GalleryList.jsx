@@ -19,6 +19,7 @@ function GalleryList({ galleryList }) {
             galleryItem and getGalleryList as props */
           }
           return <GalleryItem key={galleryItem.id} galleryItem={galleryItem} />;
+          
         }
       })}
     </>

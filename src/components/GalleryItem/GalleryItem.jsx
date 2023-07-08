@@ -1,10 +1,13 @@
-import axios from 'react';
+import axios from "react";
+import AppCSS from "../App/App.css"
 
-function GalleryItem({galleryItem}) {
+function GalleryItem({ galleryItem }) {
+    
+  return (
     <div className="image-size">
-      <img src="images/black-silhouettes.jpg" />
-    </div>;
-
+      <img src={galleryItem.path} alt={galleryItem.description} />
+    </div>
+  );
 }
 
 export default GalleryItem;
