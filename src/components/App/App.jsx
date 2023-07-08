@@ -50,25 +50,6 @@ function App() {
           {/* GalleryList Component 
             - using galleryList array as a prop */}
           <GalleryList galleryList={galleryList} />
-
-          <div className="image-size">
-            <img src="images/black-silhouettes.jpg" />
-          </div>
-          <div className="image-size">
-            <img src="images/mask.jpg" />
-          </div>
-          <div className="image-size">
-            <img src="images/overwhelming-love.jpg" />
-          </div>
-          <div className="image-size">
-            <img src="images/pumpkin-knight.jpg" />
-          </div>
-          <div className="image-size">
-            <img src="images/smiling-purple-face.jpg" />
-          </div>
-          <div className="image-size">
-            <img src="images/spooky-surprise.jpg" />
-          </div>
         </section>
       </main>
     </div>
