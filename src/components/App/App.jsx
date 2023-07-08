@@ -7,13 +7,17 @@ function App() {
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <p>Gallery goes here</p>
-        <img src="images/black-silhouettes.jpg" />
-        <img src="images/mask.jpg" />
-        <img src="images/overwhelming-love.jpg" />
-        <img src="images/pumpkin-knight.jpg" />
-        <img src="images/smiling-purple-face.jpg" />
-        <img src="images/spooky-surprise.jpg" />
+        <main>
+          <p>Gallery goes here</p>
+          <section className='image-gallery'>
+            <div className='image-size'><img src="images/black-silhouettes.jpg" /></div>
+            <div className='image-size'><img src="images/mask.jpg" /></div>
+            <div className='image-size'><img src="images/overwhelming-love.jpg" /></div>
+            <div className='image-size'><img src="images/pumpkin-knight.jpg" /></div>
+            <div className='image-size'><img src="images/smiling-purple-face.jpg" /></div>
+            <div className='image-size'><img src="images/spooky-surprise.jpg" /></div>
+          </section>
+        </main>
       </div>
     );
 }
