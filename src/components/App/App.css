@@ -1,3 +1,8 @@
+img {
+  width: 100%;
+  border: 8px solid black;
+}
+
 .App {
   text-align: center;
 }
@@ -13,7 +18,22 @@
   font-size: 1.5em;
 }
 
-img {
-  width: 26%;
+/* Image Styling */
+
+.image-gallery {
+  display: flex;
+  background-color: tan;
+  width: 85%;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-items: baseline;
+  gap: 3rem;
 }
 
+.image-size {
+  width: 27%;
+
+}
