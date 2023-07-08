@@ -3,13 +3,16 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+// Component Imports
+import GalleryList from "../GalleryList/GalleryList.jsx";
+
 function App() {
   // - USE STATES -
-  // Use state for galleryItems array
-  const [galleryItems, setGalleryItems] = useState([]);
+  // Use state for galleryList array
+  const [galleryList, setGalleryList] = useState([]);
 
-  // GET request to server for galleryItems array
-  const getGalleryItems = () => {
+  // GET request to server for galleryList array
+  const getGalleryList = () => {
     axios({
       method: "GET",
       url: "/gallery",
@@ -18,9 +21,9 @@ function App() {
         // Entire response
         console.log("\nGet request to '/gallery' sent! Response is:", response);
 
-        // Setting galleryItems to array that was retrieved
-        setGalleryItems(response.data);
-        console.log("\tResponse stored. galleryItems is:", response.data);
+        // Setting galleryList to array that was retrieved
+        setGalleryList(response.data);
+        console.log("\tResponse stored. galleryList is:", response.data);
       })
       .catch((error) => {
         console.log("\nError with GET request. Error is:", error);
@@ -32,9 +35,8 @@ function App() {
   // Call function so it runs once on component load
   // Similar to jQuery's document ready
   useEffect(() => {
-    getGalleryItems();
+    getGalleryList();
   }, []);
-
 
   // - RENDERING -
   return (
@@ -44,6 +46,11 @@ function App() {
       </header>
       <main>
         <section className="image-gallery">
+          
+          {/* GalleryList Component 
+            - using galleryList array as a prop */}
+          <GalleryList galleryList={galleryList} />
+
           <div className="image-size">
             <img src="images/black-silhouettes.jpg" />
           </div>
