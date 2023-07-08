@@ -1,3 +1,6 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@700&display=swap');
+
 img {
   width: 100%;
   border: 8px solid black;
@@ -15,7 +18,9 @@ img {
 }
 
 .App-title {
-  font-size: 1.5em;
+  margin: 1rem;
+  font-family: 'Unbounded', cursive;
+  font-size: 3.5em;
 }
 
 /* Image Styling */
@@ -37,3 +42,4 @@ img {
   width: 27%;
 
 }
+
