@@ -1,17 +1,16 @@
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@700&display=swap");
+/* Space Grotesk */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk&family=Unbounded:wght@700&display=swap");
 
-img {
-  width: 100%;
-  border: 8px solid black;
-}
-
+/* Global styles */
 .App {
   text-align: center;
 }
 
+/* Header styles */
 .App-header {
-  background-color: #222;
+  background-color: black;
   padding: 1em;
   color: white;
   margin-bottom: 1em;
@@ -19,12 +18,11 @@ img {
 
 .App-title {
   margin: 1rem;
-  font-family: 'Unbounded', cursive;
+  font-family: "Unbounded", cursive;
   font-size: 3.5em;
 }
 
-/* Image Styling */
-
+/* Image gallery styles */
 .image-gallery {
   display: flex;
   background-color: tan;
@@ -34,12 +32,38 @@ img {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  align-items: baseline;
   gap: 3rem;
 }
 
-.image-size {
-  width: 27%;
-
+.image-box {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  max-height: 300px;
+  border: 11px solid black;
+  box-shadow: 7px 9px 24px -7px black;
 }
 
+.image-description {
+  background-color: black;
+  color: rgb(255, 255, 255);
+  max-width: 300px;
+  max-height: 300px;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 200;
+  padding: 3rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  box-sizing: border-box;
+  max-width: 300px;
+  max-height: 300px;
+}
