@@ -1,20 +1,29 @@
-import axios from "react";
-import AppCSS from "../App/App.css"
-import {useState} from 'react';
+import axios from "axios";
+import AppCSS from "../App/App.css";
+import { useState } from "react";
 
 function GalleryItem({ galleryItem }) {
-    let [showImage, setShowImage] = useState('');
+  // Use states
+  const [showImage, setShowImage] = useState(true);
 
-
-    const handleImageClick = () =>{
-        console.log("Image clicked!");
-
-    } // end handleImageClick
+  const handleShowDescription = () => {
+    console.log("Image clicked!");
+    setShowImage(!showImage);
+  };
 
   return (
-    // Div holding image with onClick that will run handleImageClick
-    <div onClick={handleImageClick} className="image-size">
-      <img src={galleryItem.path} alt={galleryItem.description} />
+    <div onClick={handleShowDescription} >
+      {showImage ? (
+        <>
+            <div className="image-box">
+                <img src={galleryItem.path} alt={galleryItem.description} />
+            </div>
+                <div><p>Likes: {galleryItem.likes} ❤️</p></div>
+        </>
+        
+      ) : (
+        <p className="image-description">{galleryItem.description}</p>
+      )}
     </div>
   );
 }

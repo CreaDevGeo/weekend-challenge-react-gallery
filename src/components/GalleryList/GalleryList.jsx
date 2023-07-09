@@ -6,6 +6,13 @@ function GalleryList({ galleryList }) {
   return (
     <>
       {galleryList.map((galleryItem) => {
+        /* galleryItem = {
+                id:
+                path:
+                description:
+                likes:
+            } */
+
         {
           /* Returning a component that will use 
             galleryItem and getGalleryList as props */
