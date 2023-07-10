@@ -2,7 +2,7 @@
 import GalleryItem from "../GalleryItem/GalleryItem.jsx";
 
 // - COMPONENT FUNCTION -
-function GalleryList({ galleryList }) {
+function GalleryList({ galleryList, getGalleryList }) {
   return (
     <>
       {galleryList.map((galleryItem) => {
@@ -17,7 +17,7 @@ function GalleryList({ galleryList }) {
           /* Returning a component that will use 
             galleryItem and getGalleryList as props */
         }
-        return <GalleryItem key={galleryItem.id} galleryItem={galleryItem} />;
+        return <GalleryItem key={galleryItem.id} galleryItem={galleryItem} getGalleryList={getGalleryList}/>;
       })}
     </>
   );
