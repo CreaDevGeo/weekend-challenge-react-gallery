@@ -46,10 +46,12 @@ function App() {
       </header>
       <main>
         <section className="image-gallery">
-          
           {/* GalleryList Component 
             - using galleryList array as a prop */}
-          <GalleryList galleryList={galleryList} />
+          <GalleryList
+            galleryList={galleryList}
+            getGalleryList={getGalleryList}
+          />
         </section>
       </main>
     </div>
