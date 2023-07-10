@@ -34,7 +34,7 @@ button {
 /* Image gallery styles */
 .gallery-item-container {
   border: 10px solid black;
-  box-shadow: 7px 9px 24px -7px black;
+  box-shadow: 14px 9px 24px -5px black;
   width: 28%;
   display: flex;
   flex-wrap: wrap;
