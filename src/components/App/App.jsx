@@ -4,7 +4,9 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 // Component Imports
+import GalleryForm from "../GalleryForm/GalleryForm.jsx";
 import GalleryList from "../GalleryList/GalleryList.jsx";
+
 
 function App() {
   // - USE STATES -
@@ -45,6 +47,11 @@ function App() {
         <h1 className="App-title">Amazing Art Gallery</h1>
       </header>
       <main>
+
+      <section>
+        <GalleryForm />
+      </section>
+
         <section className="image-gallery">
           {/* GalleryList Component 
             - using galleryList array as a prop */}
